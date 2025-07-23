@@ -13,9 +13,9 @@ const ButtonAppBar = () =>  {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            JasaMarga Dashboard
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">Profile</Button>
         </Toolbar>
       </AppBar>
     </Box>
