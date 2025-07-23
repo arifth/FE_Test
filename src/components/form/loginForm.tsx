@@ -1,7 +1,7 @@
 import { Box, Button, FormGroup, TextField } from '@mui/material'
 import React, { useState } from 'react'
 
-const loginForm = ({handleLogin}:any) => {
+const loginForm = ({handleLogin,isLoading}:any) => {
 
   return (
     <Box sx={{margin:"3rem",padding:'2rem',outline:'1px dotted green',height:"600px"}}>
@@ -22,7 +22,7 @@ const loginForm = ({handleLogin}:any) => {
           variant="outlined"
         />
         <Button variant="contained" color="primary" sx={{width:"300px",mt:'2rem'}} onClick={()=> handleLogin()}>
-          save
+          {isLoading ? "Logging in..." : "Save"}
         </Button>
       </FormGroup>
     </Box>
