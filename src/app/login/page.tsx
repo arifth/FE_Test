@@ -8,12 +8,12 @@ import { useRouter } from 'next/navigation'
 
 
 const Login = () => {
-  const [login] = collectionApi.endpoints.login.useMutation({})
+  const [login,{isLoading}] = collectionApi.endpoints.login.useMutation({})
     const router = useRouter()
-  const handleLogin = () => {
-    const data = login({username:"Super Admin",password:"password12345"})
-    console.log(data)
-    router.push("/dashboard")
+  const handleLogin = async () => {
+    const res = await login({username:"Super Admin",password:"password12345"}).unwrap()
+    console.log("\n",res)
+    res?.code === 200 && router.push('/dashboard')
   }
 
     const [UserName,setUserName] = useState("")
@@ -21,7 +21,7 @@ const Login = () => {
   return (
          <Box sx={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Box sx={{width:"50%",height:"100vh"}}>
-            <LoginForm handleLogin={handleLogin}  />
+            <LoginForm handleLogin={handleLogin} isLoading={isLoading} />
           </Box>
           <Box sx={{bgcolor:"aquamatic",width:"50%",height:"100vh"}}></Box>
          </Box>
