@@ -1,14 +1,21 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const collectionApi = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: "https://pokeapi.co/api/v2/"}),
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080/api"}),
   tagTypes: [],
   endpoints: (build) => ({
     loginToDashboard: build.query({
       query: (name: string) => `pokemon/${name}`,
     }),
+    login: build.mutation({
+      query: (payload:{username:string,password:string}) => ({
+        url: "/auth/login",
+        method: "POST",
+        body: payload
+      })
+    })
   }),
 })
 
 // Export hooks for usage in functional components
-export const {useLoginToDashboardQuery } = collectionApi
+export const {useLoginToDashboardQuery,useLoginMutation } = collectionApi

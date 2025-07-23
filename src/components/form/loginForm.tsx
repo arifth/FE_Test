@@ -1,13 +1,8 @@
 import { Box, Button, FormGroup, TextField } from '@mui/material'
-import { useRouter } from 'next/navigation'
-import React from 'react'
+import React, { useState } from 'react'
 
-const loginForm = () => {
+const loginForm = ({handleLogin}:any) => {
 
-  const router = useRouter()
-  const handleLogin = () => {
-    router.push("/dashboard")
-  }
   return (
     <Box sx={{margin:"3rem",padding:'2rem',outline:'1px dotted green',height:"600px"}}>
       
