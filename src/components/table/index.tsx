@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import Paper from '@mui/material/Paper';
+import { SxProps } from '@mui/material';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -37,17 +38,21 @@ const rows = [
 const paginationModel = { page: 0, pageSize: 5 };
 
 export default function DataTable() {
-    console.log("==>",process.env.NEXT_PUBLIC_API_URL)
+    const styleTable : SxProps = {
+        '& .MuiDataGrid-topContainer':{
+            width:'1200px'
+        }
+    }
   return (
-    <Paper sx={{ height: 400, width: '100%' }}>
+    // <Paper sx={stylePaper}>
       <DataGrid
         rows={rows}
         columns={columns}
         initialState={{ pagination: { paginationModel } }}
         pageSizeOptions={[5, 10]}
         checkboxSelection
-        sx={{ border: 0 }}
+        sx={styleTable}
       />
-    </Paper>
+    // </Paper>
   );
 }
