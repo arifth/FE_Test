@@ -8,10 +8,10 @@ import { Box, SxProps } from '@mui/material'
 const layout = ({children}:{children:React.ReactNode}) => {
     const sideBarStyle : SxProps = {
         minHeight:'100vh',
-        maxHeight:'100vh',
+        maxHeight:'max-content',
         width:"15%",
         borderRight:'.5px solid hsl(36, 2%, 50%)',
-        boxShadow: "7px -1px 0px -6px rgba(0,0,0,0.75)"
+        // boxShadow: "7px -1px 0px -6px rgba(0,0,0,0.75)"
 
     }
     const contentStyle : SxProps = {

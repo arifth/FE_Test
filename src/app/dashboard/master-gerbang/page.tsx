@@ -1,9 +1,14 @@
-import React from 'react'
+'use client'
 
-const page = () => {
+import * as React from 'react';
+import Table from '@/components/table'
+import { useGetAllGerbangsQuery } from '@/services/baseApi';
+
+export default function Dashboard() {
+  const {data,isLoading} = useGetAllGerbangsQuery({})
   return (
-    <div>Ini master gerbang</div>
-  )
+    <div>
+      <Table  isLoading={isLoading} data={data?.data?.rows?.rows}/>
+    </div>
+  );
 }
-
-export default page

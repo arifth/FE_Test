@@ -13,9 +13,15 @@ export const collectionApi = createApi({
         method: "POST",
         body: payload
       })
+    }),
+    getAllGerbangs: build.query({
+      query:() => "/gerbangs"
+    }),
+    getAllLalin: build.query({
+      query:  () => "/lalins"
     })
   }),
 })
 
 // Export hooks for usage in functional components
-export const {useLoginToDashboardQuery,useLoginMutation } = collectionApi
+export const {useLoginToDashboardQuery,useLoginMutation,useGetAllLalinQuery,useGetAllGerbangsQuery } = collectionApi

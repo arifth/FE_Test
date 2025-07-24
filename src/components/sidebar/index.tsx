@@ -15,7 +15,7 @@ const index = ({sx}:{sx:SxProps}) => {
     }, 
     {
       name: "Laporan Lalin",
-      route:"/table",
+      route:"/laporan-lalin",
       icon: <AreaChartIcon />
     }, 
     {
