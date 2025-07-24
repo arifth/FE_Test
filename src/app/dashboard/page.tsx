@@ -1,12 +1,14 @@
 'use client'
 
 import * as React from 'react';
-import Table from '@/components/table'
-import { useLoginToDashboardQuery } from '@/services/baseApi';
+import Bar from '@/components/chart/Bar'
+import { Box } from '@mui/material';
 
 export default function Dashboard() {
-   const { data, error, isLoading } = useLoginToDashboardQuery("what");
   return (
-    <Table />
+    <Box>
+      <Bar />
+    </Box>
+    
   );
 }

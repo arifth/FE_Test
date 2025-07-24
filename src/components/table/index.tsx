@@ -40,11 +40,10 @@ const paginationModel = { page: 0, pageSize: 5 };
 export default function DataTable() {
     const styleTable : SxProps = {
         '& .MuiDataGrid-topContainer':{
-            width:'1200px'
+            // width: '1000px'
         }
     }
   return (
-    // <Paper sx={stylePaper}>
       <DataGrid
         rows={rows}
         columns={columns}
@@ -53,6 +52,5 @@ export default function DataTable() {
         checkboxSelection
         sx={styleTable}
       />
-    // </Paper>
   );
 }

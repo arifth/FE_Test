@@ -71,4 +71,9 @@ table {
 	border-spacing: 0;
 }
 
+a {
+  color: blue;
+  text-decoration: none; /* no underline */
+}
+
 

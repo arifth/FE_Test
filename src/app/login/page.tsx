@@ -12,7 +12,10 @@ const Login = () => {
     const router = useRouter()
   const handleLogin = async () => {
     const res = await login({username:"Super Admin",password:"password12345"}).unwrap()
-    console.log("\n",res)
+    if(res?.code === 200) {
+      console.log(res)
+      document.cookie = `token=${res.token}`
+    }
     res?.code === 200 && router.push('/dashboard')
   }
 
