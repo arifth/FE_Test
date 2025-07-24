@@ -7,8 +7,16 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Avatar } from '@mui/material';
+import BasicPopover from './PopOverHeader';
+import { useRouter } from 'next/navigation';
 
 const ButtonAppBar = () =>  {
+  const router = useRouter()
+  const handleLogOut = () => {
+    document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    router.push("/login")
+
+  }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -16,7 +24,9 @@ const ButtonAppBar = () =>  {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             JasaMarga Dashboard
           </Typography>
-          <Avatar  />
+          <BasicPopover handleLogOut={handleLogOut}>
+            <Avatar  />
+          </BasicPopover>
         </Toolbar>
       </AppBar>
     </Box>
