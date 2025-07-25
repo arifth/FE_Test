@@ -20,7 +20,7 @@ const loginForm = ({handleLogin,isLoading,setUsername,setPassword}:any) => {
         <br />
         <TextField
           style={{ width: "500px", margin: "5px" }}
-          type="text"
+          type="password"
           label="Password"
           variant="outlined"
             onChange={(val)=>{
