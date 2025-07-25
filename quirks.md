@@ -1,0 +1,1 @@
+- [ ] file middleware.ts doesnt work, turns out it was put on /src/app, while it should be       located at /src instead
