@@ -1,7 +1,7 @@
 import { Box, Button, FormGroup, TextField,Typography} from '@mui/material'
 import React, { useState } from 'react'
 
-const loginForm = ({handleLogin,isLoading}:any) => {
+const loginForm = ({handleLogin,isLoading,setUsername,setPassword}:any) => {
 
   return (
     <Box sx={{margin:"3rem",padding:'2rem',outline:'1px solid hsl(0, 0%, 83%)',height:"80vh",borderRadius:'.5rem'}}>
@@ -13,6 +13,9 @@ const loginForm = ({handleLogin,isLoading}:any) => {
           type="text"
           label="UserName"
           variant="outlined"
+          onChange={(val)=>{
+            setUsername(val?.target?.value)   
+          }}
         />
         <br />
         <TextField
@@ -20,6 +23,9 @@ const loginForm = ({handleLogin,isLoading}:any) => {
           type="text"
           label="Password"
           variant="outlined"
+            onChange={(val)=>{
+            setPassword(val?.target?.value)   
+          }}
         />
         <Button variant="contained" color="primary" sx={{width:"300px",mt:'2rem'}} onClick={()=> handleLogin()}>
           {isLoading ? "Logging ..." : "Save"}

@@ -10,7 +10,7 @@ const layout = ({children}:{children:React.ReactNode}) => {
         minHeight:'100vh',
         // maxHeight:'100vh',
         width:"15%",
-        borderRight:'.5px solid hsl(36, 2%, 50%)',
+        borderRight:'.5px solid hsl(30, 1.90%, 59.20%)',
         // boxShadow: "7px -1px 0px -6px rgba(0,0,0,0.75)"
 
     }
