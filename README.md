@@ -16,8 +16,15 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+
+
 Preview
-Play Video ![](/vids/80percent.mp4)
+
+
+
+https://github.com/user-attachments/assets/24c9e9f0-089e-468d-9c18-f37017fc6ad3
+https://github.com/user-attachments/assets/25377f57-1b8b-44dc-b19e-3f72e79ac163
+
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
