@@ -17,8 +17,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Preview
-![](/vids/80percent.mp4)
-[https://github.com/arifth/FE_Test/blob/dev/arif/vids/80percent.mp4]
+Play Video ![](/vids/80percent.mp4)
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
