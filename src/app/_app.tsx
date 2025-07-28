@@ -6,7 +6,7 @@ const App = ({Component,pageProps}:any) => {
     const login = false
     const router = useRouter()
   return (
-    withProtectedRoute(<Component {...pageProps}/>) // Replace <Component /> with your actual component
+    withProtectedRoute(<Component {...pageProps}/>) 
   )
 }
 

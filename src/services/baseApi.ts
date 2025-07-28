@@ -18,7 +18,7 @@ export const collectionApi = createApi({
       query:() => "/gerbangs"
     }),
     getAllLalin: build.query({
-      query:  () => "/lalins"
+      query:({date}) => `/lalins?date=${date}`
     })
   }),
 })
