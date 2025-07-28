@@ -1,12 +1,21 @@
 import * as React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { SxProps } from '@mui/material';
+import BoxAction from '@/components/BoxAction'
 
 const columnGerbang: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 100 },
-  { field: 'IdCabang', headerName: 'ID Cabang', width: 300 },
+  { field: 'IdCabang', headerName: 'ID Cabang', width: 100 },
   { field: 'NamaGerbang', headerName: 'Nama Gerbang', width: 300 },
   { field: 'NamaCabang', headerName: 'Nama Cabang', width: 200 },
+  {
+        field: 'actions',
+        headerName: 'Actions',
+        width: 300,
+        renderCell: (params) => (
+          <BoxAction {...params} />
+        ),
+  },
 ];
 
 const columnLalin : GridColDef[] = [
